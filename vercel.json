@@ -7,14 +7,10 @@
         },
         {
             "source": "/(.*)",
-            "destination": "/frontend/index.html"
+            "destination": "/index.html"
         }
     ],
     "builds": [
-        {
-            "src": "backend/src/app.ts",
-            "use": "@vercel/node"
-        },
         {
             "src": "api/index.ts",
             "use": "@vercel/node"
