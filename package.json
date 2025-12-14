@@ -1,0 +1,17 @@
+{
+    "name": "sweet-shop-management-system",
+    "version": "1.0.0",
+    "description": "Root package to manage backend and frontend",
+    "scripts": {
+        "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+        "dev:backend": "cd backend && npm run dev",
+        "dev:frontend": "cd frontend && npm run dev",
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
