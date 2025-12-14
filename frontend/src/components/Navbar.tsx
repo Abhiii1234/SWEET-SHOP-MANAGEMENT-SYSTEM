@@ -1,13 +1,13 @@
 // import React from 'react'; // Removed unused import
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { useCart } from '../context/CartContext';
+
 
 const Navbar = () => {
     const { user, logout } = useAuth();
-    const { getTotalItems } = useCart();
+
     const navigate = useNavigate();
-    // const cartItemCount = getTotalItems(); // Removed unused variable
+
 
     const handleLogout = () => {
         logout();
