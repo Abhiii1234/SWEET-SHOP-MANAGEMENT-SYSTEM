@@ -31,12 +31,17 @@ const AppRoutes = () => {
   );
 };
 
+import Footer from './components/Footer';
+
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
         <CartProvider>
-          <AppRoutes />
+          <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+            <AppRoutes />
+            <Footer />
+          </div>
         </CartProvider>
       </AuthProvider>
     </BrowserRouter>
