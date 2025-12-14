@@ -20,6 +20,15 @@ app.get('/', (req: Request, res: Response) => {
     res.send('Sweet Shop API is running!');
 });
 
+// Serve static files from the React frontend app
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../../dist')));
+
+// Anything that doesn't match the above, send back index.html
+app.get('*', (req: Request, res: Response) => {
+    res.sendFile(path.join(__dirname, '../../dist/index.html'));
+});
+
 export { app, port };
 
 if (require.main === module) {
