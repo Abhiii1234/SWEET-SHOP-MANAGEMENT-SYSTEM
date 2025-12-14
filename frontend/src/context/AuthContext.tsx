@@ -25,7 +25,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         // In a real app, we might decode the JWT or fetch /me
         const storedUser = localStorage.getItem('user');
         if (storedUser && token) {
-            setUser(JSON.parse(storedUser));
+            try {
+                setUser(JSON.parse(storedUser));
+            } catch (error) {
+                console.error("Failed to parse user from localStorage", error);
+                localStorage.removeItem('user');
+                localStorage.removeItem('token');
+                setUser(null);
+                setToken(null);
+            }
         }
     }, [token]);
 
