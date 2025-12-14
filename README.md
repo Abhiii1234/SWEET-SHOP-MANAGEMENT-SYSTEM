@@ -306,7 +306,7 @@ This project is created for educational purposes.
 
 ## 👨‍💻 Author
 
-Built with ❤️ using modern web technologies and AI assistance
+Built with ❤️ by Abhigyan Pushkar
 
 ---
 
